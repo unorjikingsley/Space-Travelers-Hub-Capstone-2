@@ -9,7 +9,7 @@ const NavBar = () => {
     },
     {
       name: 'Missions',
-      path: 'Mission',
+      path: 'Missions',
     },
     {
       name: 'My Profile',
