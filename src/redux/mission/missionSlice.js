@@ -1,36 +1,34 @@
-import { createSlice } from '@reduxjs/toolkit';
-// import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-// const url = 'https://api.spacexdata.com/v3/missions';
+const missionUrl = 'https://api.spacexdata.com/v3/missions';
+const missionList = [];
 
-const initialState = {
-  mission: [
-    {
-      mission_id: 'item1',
-      mission_name: 'The Great Gatsby',
-      description: 'John Smith',
-    },
-    {
-      mission_id: 'item2',
-      mission_name: 'Anna Karenina',
-      description: 'Leo Tolstoy',
-    },
-    {
-      mission_id: 'item3',
-      mission_name: 'The Selfish Gene',
-      description: 'Richard Dawkins',
-    },
-  ],
-  isLoading: true,
-  errMsg: false,
-  addMsg: false,
-  delMsg: false,
-};
+export const fetchMissions = createAsyncThunk('missions/fetchMissions', async () => {
+  const response = await axios.get(missionUrl);
+  if (response.data) {
+    console.log(response.data);
+    return response.data;
+  }
+  return [];
+});
 
 const missionSlice = createSlice({
   name: 'mission',
-  initialState,
-  extraReducers: {},
+  initialState: missionList,
+  extraReducers: (build) => {
+    build.addCase(fetchMissions.fulfilled, (state, action) => {
+      const currentState = state;
+      Object.entries(action.payload).forEach((elm) => {
+        currentState.push({
+          id: elm[1].mission_id,
+          mission_name: elm[1].mission_name,
+          description: elm[1].description,
+        });
+      });
+      return currentState;
+    });
+  },
 });
 
 export default missionSlice.reducer;
