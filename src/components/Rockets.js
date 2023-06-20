@@ -41,22 +41,6 @@ const Rockets = () => {
       )}
     </section>
   );
-
-  // const RocketItems = useSelector((state) => state.rockets);
-  //   return (
-  //     <ul>
-  //       {RocketItems.map((item) => (
-  //         <RocketItem
-  //           id={item.id}
-  //           key={item.rocket_id}
-  //           name={item.rocket_name}
-  //           description={item.description}
-  //           images={item.flickr_images}
-  //         />
-  //       ))}
-
-//     </ul>
-//   );
 };
 
 export default Rockets;

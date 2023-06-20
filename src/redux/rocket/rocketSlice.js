@@ -58,19 +58,3 @@ const rocketSlice = createSlice({
 export const { reserveRocket, cancelReserveRocket } = rocketSlice.actions;
 
 export default rocketSlice.reducer;
-
-//  extraReducers: (build) => {
-//     build
-//       .addCase(fetchRockets.fulfilled, (state, action) => {
-//         const currentRocState = state;
-//         Object.entries(action.payload).forEach((elm) => {
-//           currentRocState.push({
-//             id: elm[1].rocket_id,
-//             rocket_name: elm[1].rocket_name,
-//             description: elm[1].description,
-//             flickr_images: elm[1].flickr_images,
-//           });
-//         });
-//         return currentRocState;
-//       });
-//   },
