@@ -25,8 +25,12 @@
 }
 
 .api-name {
-  font-size: 10px;
+  background: rgb(38, 121, 177);
+  font-size: 20px;
   font-weight: 400;
+  color: white;
+  border-radius: 5px;
+  padding: 2px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -47,8 +51,18 @@
 
 .reserved {
   padding: 10px;
-  color: white;
-  background-color: rgb(38, 121, 177);
   border: none;
   border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+.cancel {
+  color: rgb(38, 121, 177);
+  background-color: white;
+  border: 1px solid rgb(38, 121, 177);
+}
+
+.reserve {
+  background-color: rgb(38, 121, 177);
+  color: white;
 }
