@@ -7,7 +7,7 @@ const missionList = [];
 export const fetchMissions = createAsyncThunk('missions/fetchMissions', async () => {
   const response = await axios.get(missionUrl);
   if (response.data) {
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   }
   return [];

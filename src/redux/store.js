@@ -9,4 +9,9 @@ const store = configureStore({
   },
 });
 
+const selectRockets = (store) => store.rocket;
+const selectMissions = (store) => store.missions;
+
+export { selectMissions, selectRockets };
+
 export default store;
