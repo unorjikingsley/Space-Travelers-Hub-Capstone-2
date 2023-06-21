@@ -18,7 +18,6 @@ const Missions = () => {
           <td>Name</td>
           <td>Description</td>
           <td>Status</td>
-          <td />
         </tr>
         {missionItems.map((item) => (
           <MissionItem
