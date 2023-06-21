@@ -12,10 +12,6 @@ th {
   padding: 0.5rem;
 }
 
-th {
-  text-align: center;
-}
-
 table {
   margin: 2rem 4rem;
 }
@@ -41,4 +37,5 @@ table {
 
 button {
   padding: 0.3rem;
+  font-size: 12px;
 }
