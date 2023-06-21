@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission } from '../redux/mission/missionSlice';
+import '../styles/missions.css';
 
 const MissionItem = ({
   name, description, id, joined,
@@ -13,13 +14,13 @@ const MissionItem = ({
         <td>
           <h4>{name}</h4>
         </td>
-        <td>{description}</td>
-        <td>
+        <td className="description">{description}</td>
+        <td className="status">
           <p>
-            {joined ? <span>Active Member</span> : <span>Not a Member</span>}
+            {joined ? <span className="active-member">Active Member</span> : <span className="not-a-member">Not a Member</span>}
           </p>
         </td>
-        <td>
+        <td className="join">
           <button
             type="button"
             className="join-mission"
