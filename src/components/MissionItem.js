@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { joinMission } from '../redux/mission/missionSlice';
+import { cancelMission, joinMission } from '../redux/mission/missionSlice';
 import '../styles/missions.css';
 
 const MissionItem = ({
@@ -17,19 +17,35 @@ const MissionItem = ({
         <td className="description">{description}</td>
         <td className="status">
           <p>
-            {joined ? <span className="active-member">Active Member</span> : <span className="not-a-member">Not a Member</span>}
+            {joined ? (
+              <span className="active-member">Active Member</span>
+            ) : (
+              <span className="not-a-member">Not a Member</span>
+            )}
           </p>
         </td>
         <td className="join">
-          <button
-            type="button"
-            className="join-mission"
-            onClick={() => {
-              dispatch(joinMission(id));
-            }}
-          >
-            Join Mission
-          </button>
+          {joined ? (
+            <button
+              type="button"
+              className="leave-mission"
+              onClick={() => {
+                dispatch(cancelMission(id));
+              }}
+            >
+              Cancel Mission
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="join-mission"
+              onClick={() => {
+                dispatch(joinMission(id));
+              }}
+            >
+              Join Mission
+            </button>
+          )}
         </td>
       </tr>
     </tbody>
