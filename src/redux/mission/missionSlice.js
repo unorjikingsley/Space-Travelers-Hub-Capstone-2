@@ -43,7 +43,6 @@ const missionSlice = createSlice({
           id: elm[1].mission_id,
           mission_name: elm[1].mission_name,
           description: elm[1].description,
-          status: 'Not a member',
           joined: false,
         });
       });
