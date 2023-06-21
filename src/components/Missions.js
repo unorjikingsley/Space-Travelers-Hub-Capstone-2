@@ -25,6 +25,7 @@ const Missions = () => {
             name={item.mission_name}
             description={item.description}
             id={item.id}
+            joined={item.joined}
           />
         ))}
       </table>
