@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 
-table, td, th {
+table,
+td,
+th {
   border: 1px solid rgb(199, 193, 193);
   border-collapse: collapse;
   padding: 0.5rem;
@@ -18,7 +20,8 @@ table {
   margin: 2rem 4rem;
 }
 
-.active-member, .not-a-member {
+.active-member,
+.not-a-member {
   font-size: 12px;
   background-color: rgb(38, 121, 177);
   padding: 0.3rem;
@@ -30,7 +33,8 @@ table {
   background-color: grey;
 }
 
-.status, .join {
+.status,
+.join {
   width: 15%;
   text-align: center;
 }
