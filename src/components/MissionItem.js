@@ -5,12 +5,12 @@ import { cancelMission, joinMission } from '../redux/mission/missionSlice';
 import '../styles/missions.css';
 
 const MissionItem = ({
-  name, description, id, joined,
+  name, description, id, joined, index,
 }) => {
   const dispatch = useDispatch();
   return (
     <tbody>
-      <tr>
+      <tr className={index % 2 === 0 ? 'deep-shade-row' : 'light-shade-row'}>
         <td>
           <h4>{name}</h4>
         </td>
@@ -57,6 +57,7 @@ MissionItem.propTypes = {
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   joined: PropTypes.bool.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default MissionItem;

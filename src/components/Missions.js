@@ -22,9 +22,10 @@ const Missions = () => {
           <th>Status</th>
           <th />
         </tr>
-        {missionItems.map((item) => (
+        {missionItems.map((item, index) => (
           <MissionItem
             key={item.mission_id}
+            index={index}
             name={item.mission_name}
             description={item.description}
             id={item.id}
