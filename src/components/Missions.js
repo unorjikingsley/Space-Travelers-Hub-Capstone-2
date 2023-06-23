@@ -1,18 +1,11 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/mission/missionSlice';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import MissionItem from './MissionItem';
 import '../styles/missions.css';
 
 const Missions = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, []);
-
-  const { missionList } = useSelector((state) => state.mission);
+ const { missionList } = useSelector((state) => state.mission);
   return (
     <ul>
       <table>
@@ -24,7 +17,7 @@ const Missions = () => {
         </tr>
         {missionList.map((item, index) => (
           <MissionItem
-            key={item.mission_id}
+            key={item.id}
             index={index}
             name={item.mission_name}
             description={item.description}
