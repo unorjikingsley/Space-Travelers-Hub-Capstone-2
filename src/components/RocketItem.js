@@ -24,7 +24,7 @@ const RocketItem = ({ rocket }) => {
         <img src={rocket.flickr_images[0]} className="img-api" alt="rocket" />
       </div>
       <div className="div-api">
-        <span>{rocket.rocket_name}</span>
+        <h2>{rocket.name}</h2>
         <p className="para-api">
           {rocket.reserved === true && (
             <span className="api-name">Reserved</span>
@@ -51,8 +51,8 @@ export default RocketItem;
 
 RocketItem.propTypes = {
   rocket: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    rocket_name: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
     rocket_id: PropTypes.string.isRequired,

@@ -53,11 +53,17 @@ const MissionItem = ({
 };
 
 MissionItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  joined: PropTypes.bool.isRequired,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  id: PropTypes.string,
+  joined: PropTypes.bool,
   index: PropTypes.number.isRequired,
+};
+MissionItem.defaultProps = {
+  name: null,
+  description: null,
+  id: null,
+  joined: false,
 };
 
 export default MissionItem;
