@@ -12,7 +12,7 @@ const Missions = () => {
     dispatch(fetchMissions());
   }, []);
 
-  const missionItems = useSelector((state) => state.mission);
+  const { missionList } = useSelector((state) => state.mission);
   return (
     <ul>
       <table>
@@ -22,7 +22,7 @@ const Missions = () => {
           <th>Status</th>
           <th />
         </tr>
-        {missionItems.map((item, index) => (
+        {missionList.map((item, index) => (
           <MissionItem
             key={item.mission_id}
             index={index}
