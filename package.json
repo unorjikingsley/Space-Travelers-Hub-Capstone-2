@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/unorjikingsley/Space-Travelers-Hub-Capstone-2",
+  "homepage": "https://unorjikingsley.github.io/Space-Travelers-Hub-Capstone-2",
   "jest": {
     "moduleNameMapper": {
       "axios": "axios/dist/axios"
