@@ -90,7 +90,7 @@ For more information on the importance of a professional README for your reposit
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://space-travelers-hub-oqso.onrender.com/)
+- [Live Demo Link](http)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,14 +115,14 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Salimer/Space-Travelers-Hub.git
+  git clone https://github.com/unorjikingsley/Space-Travelers-Hub-Capstone-2.git
 ```
 
 using Ubuntu:
 
 ```sh
   cd my-desired-folder
-  git clone https://github.com/Salimer/Space-Travelers-Hub.git
+  git clone https://github.com/unorjikingsley/Space-Travelers-Hub-Capstone-2.git
 ```
 
 For more information on how to clone or fork a repository:
@@ -157,15 +157,15 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **SALIM BAMAHFOODH**
+👤 **Unorji Kingsley**
 
-- GitHub: [@Salimer](https://github.com/Salimer)
-- LinkedIn: [SALIM BAMAHFOODH](https://www.linkedin.com/in/sbamahfoodh/)
+- GitHub: [@UnorjiKingsley](https://github.com/unorjikingsley)
+- LinkedIn: [Unorji Kingsley](https://www.linkedin.com/in/unorjikingsley/)
 
-👤 **David ANDRIANARIVO**
+👤 **Charles Andrews**
 
-- GitHub: [@andrianarivo](https://github.com/andrianarivo)
-- LinkedIn: [David ANDRIANARIVO](https://www.linkedin.com/in/david-andrianarivo-3692101b6/)
+- GitHub: [@charlesAndrews](https://github.com/forLoop94)
+- LinkedIn: [Charles Andrews](https://https://www.linkedin.com/in/andrewsCharlesUwem/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
