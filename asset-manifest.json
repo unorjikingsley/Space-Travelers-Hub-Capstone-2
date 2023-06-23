@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/unorjikingsley/Space-Travelers-Hub-Capstone-2/static/css/main.9b42b83d.css",
-    "main.js": "/unorjikingsley/Space-Travelers-Hub-Capstone-2/static/js/main.74cdd405.js",
-    "static/media/logo-space-travelers-inc.png": "/unorjikingsley/Space-Travelers-Hub-Capstone-2/static/media/logo-space-travelers-inc.3f6fb2742f28651730c0.png",
-    "index.html": "/unorjikingsley/Space-Travelers-Hub-Capstone-2/index.html",
-    "main.9b42b83d.css.map": "/unorjikingsley/Space-Travelers-Hub-Capstone-2/static/css/main.9b42b83d.css.map",
-    "main.74cdd405.js.map": "/unorjikingsley/Space-Travelers-Hub-Capstone-2/static/js/main.74cdd405.js.map"
+    "main.css": "/Space-Travelers-Hub-Capstone-2/static/css/main.9b42b83d.css",
+    "main.js": "/Space-Travelers-Hub-Capstone-2/static/js/main.18cd4744.js",
+    "static/media/logo-space-travelers-inc.png": "/Space-Travelers-Hub-Capstone-2/static/media/logo-space-travelers-inc.3f6fb2742f28651730c0.png",
+    "index.html": "/Space-Travelers-Hub-Capstone-2/index.html",
+    "main.9b42b83d.css.map": "/Space-Travelers-Hub-Capstone-2/static/css/main.9b42b83d.css.map",
+    "main.18cd4744.js.map": "/Space-Travelers-Hub-Capstone-2/static/js/main.18cd4744.js.map"
   },
   "entrypoints": [
     "static/css/main.9b42b83d.css",
-    "static/js/main.74cdd405.js"
+    "static/js/main.18cd4744.js"
   ]
 }
