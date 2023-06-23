@@ -9,6 +9,7 @@ import {
 
 const RocketItem = ({ rocket }) => {
   const dispatch = useDispatch();
+
   const handleClick = (e, id) => {
     e.preventDefault();
     if (rocket.reserved === false) {
@@ -51,11 +52,10 @@ export default RocketItem;
 
 RocketItem.propTypes = {
   rocket: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    rocket_id: PropTypes.string.isRequired,
-    reserved: PropTypes.bool.isRequired,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    flickr_images: PropTypes.arrayOf(PropTypes.string),
+    reserved: PropTypes.bool,
   }).isRequired,
 };

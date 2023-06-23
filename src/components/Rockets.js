@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../redux/rocket/rocketSlice';
+import { fetchRockets, rocketUrl } from '../redux/rocket/rocketSlice';
 import RocketItem from './RocketItem';
 import { selectRockets } from '../redux/store';
 
@@ -11,7 +11,7 @@ const Rockets = () => {
 
   useEffect(() => {
     if (rockets.length > 0) return;
-    dispatch(fetchRockets());
+    dispatch(fetchRockets(rocketUrl));
   }, [dispatch, rockets.length]);
 
   if (error) {

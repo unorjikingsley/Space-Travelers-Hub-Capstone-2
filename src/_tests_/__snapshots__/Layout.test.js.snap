@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Layout component render 1`] = `
+<div>
+  <nav
+    className="navbar"
+  >
+    <div
+      className="logo"
+    >
+      <img
+        alt="space traveler's hub logo"
+        className="logo-img"
+        src="logo-space-travelers-inc.png"
+      />
+      <h1
+        className="head"
+      >
+        Space Traveller's Hub
+      </h1>
+    </div>
+    <ul
+      className="nav-list"
+    >
+      <li
+        className="list"
+      >
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="list"
+      >
+        <a
+          className="unactive"
+          href="/Missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        className="list"
+      >
+        <a
+          className="unactive"
+          href="/Profile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <footer
+    className="footer"
+  >
+    <p
+      className="foot-para"
+    >
+      Copyright ©
+       
+      2023
+       
+      Projects by Unorji Kingsley and Charles Andrews
+    </p>
+  </footer>
+</div>
+`;
