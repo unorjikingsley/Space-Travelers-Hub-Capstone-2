@@ -9,14 +9,19 @@ const initialState = {
   error: undefined,
 };
 
-export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async (_, thunkAPI) => {
-  try {
-    const resp = await axios(rocketUrl);
-    return resp.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue('An error occured while getting your data');
-  }
-});
+export const fetchRockets = createAsyncThunk(
+  'rockets/fetchRockets',
+  async (_, thunkAPI) => {
+    try {
+      const resp = await axios.get(rocketUrl);
+      return resp.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        'An error occured while getting your data',
+      );
+    }
+  },
+);
 
 const rocketSlice = createSlice({
   name: 'rockets',

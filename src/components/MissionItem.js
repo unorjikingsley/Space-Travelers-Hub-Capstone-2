@@ -1,13 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { cancelMission, joinMission } from '../redux/mission/missionSlice';
+// import { useDispatch } from 'react-redux';
+// import { cancelMission, joinMission } from '../redux/mission/missionSlice';
 import '../styles/missions.css';
 
-const MissionItem = ({
-  name, description, id, joined,
-}) => {
-  const dispatch = useDispatch();
+const MissionItem = (props) => {
+  // const dispatch = useDispatch();
+  const {
+    name, description, id, joined,
+  } = props;
+
+  const handleClick = (e, { reserved }) => {
+    e.preventDefault();
+    if (reserved) {
+      // dispatch(cancelMission({ id }));
+    } else {
+      // dispatch(joinMission({ id }));
+    }
+  };
+
   return (
     <tbody>
       <tr>
@@ -25,7 +36,7 @@ const MissionItem = ({
           </p>
         </td>
         <td className="join">
-          {joined ? (
+          {/* {joined ? (
             <button
               type="button"
               className="leave-mission"
@@ -45,7 +56,16 @@ const MissionItem = ({
             >
               Join Mission
             </button>
-          )}
+          )} */}
+
+          <button
+            type="button"
+            onClick={(e) => {
+              handleClick(e, { id, joined });
+            }}
+          >
+            {joined ? 'Leave mission' : 'Join mission'}
+          </button>
         </td>
       </tr>
     </tbody>

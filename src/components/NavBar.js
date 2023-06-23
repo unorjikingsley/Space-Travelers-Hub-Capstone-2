@@ -42,5 +42,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// className = {isActive ? active : undefined}

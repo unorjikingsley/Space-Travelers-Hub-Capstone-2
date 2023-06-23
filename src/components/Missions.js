@@ -1,38 +1,68 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/mission/missionSlice';
-import MissionItem from './MissionItem';
-import '../styles/missions.css';
+import { getMissions, joinMission } from '../redux/mission/missionSlice';
 
 const Missions = () => {
+  const missions = useSelector((state) => state.mission.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, []);
+    if (!missions.length) {
+      dispatch(getMissions());
+    }
+  }, [dispatch, missions]);
 
-  const missionItems = useSelector((state) => state.mission);
+  const handleJoinMission = (missionId) => {
+    const mission = missions.find((mission) => mission.mission_id === missionId);
+
+    if (mission.reserved) {
+      dispatch(joinMission(missionId));
+    } else {
+      dispatch(joinMission(missionId));
+    }
+  };
+
   return (
-    <ul>
-      <table>
-        <tr className="t-row">
-          <th>Name</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th />
-        </tr>
-        {missionItems.map((item) => (
-          <MissionItem
-            key={item.mission_id}
-            name={item.mission_name}
-            description={item.description}
-            id={item.id}
-            joined={item.joined}
-          />
-        ))}
+    <div>
+      <table className="table-container">
+        <thead>
+          <tr className="table-head">
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <tr key={mission.mission_id}>
+              <td>{mission.mission_name}</td>
+              <td>{mission.description}</td>
+              <td className="table-status-action">
+                {' '}
+                <span
+                  className={mission.reserved ? 'active-member' : 'not-member'}
+                >
+                  {mission.reserved ? 'Active Member' : 'Not a Member'}
+                </span>
+              </td>
+              <td className="table-status-action">
+                <button
+                  className={
+                    mission.reserved ? 'leave-mission' : 'join-mission'
+                  }
+                  type="button"
+                  onClick={() => handleJoinMission(mission.mission_id)}
+                  disabled={mission.loading}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
-    </ul>
+    </div>
   );
 };
 
