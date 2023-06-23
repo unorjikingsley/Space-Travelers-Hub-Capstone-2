@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Interactions test will test user interactions with missions component 1`] = `
+<tbody>
+  <tr
+    className="light-shade-row"
+  >
+    <td>
+      <h4 />
+    </td>
+    <td
+      className="description"
+    />
+    <td
+      className="status"
+    >
+      <p>
+        <span
+          className="not-a-member"
+        >
+          Not a Member
+        </span>
+      </p>
+    </td>
+    <td
+      className="join"
+    >
+      <button
+        className="join-mission"
+        onClick={[Function]}
+        type="button"
+      >
+        Join Mission
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
