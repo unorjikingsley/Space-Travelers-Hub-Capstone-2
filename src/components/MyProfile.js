@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import '../styles/profile.css';
 
 function Profile() {
   const { missionList } = useSelector((state) => state.mission);
@@ -9,30 +10,45 @@ function Profile() {
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
 
   return (
-    <div>
-      <div>
-        <ul>
-          <h2>My Missions</h2>
-          {joinedMission.length > 0
-            ? joinedMission.map((mission) => (
-              <li key={mission.id}>
-                <h4>{mission.name}</h4>
-              </li>
-            ))
-            : <li>No Joined Missions Yet</li>}
-        </ul>
+    <div className="table-cont">
+      <div className="table-container">
+        <h2 className="table-head">My Missions</h2>
+        <table>
+          <tbody>
+            {' '}
+            {joinedMission.length > 0 ? (
+              joinedMission.map((mission) => (
+                <tr key={mission.id}>
+                  <td>{mission.name}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td>No Joined Missions Yet</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
-      <div>
-        <ul>
-          <h2>My Rockets</h2>
-          {reservedRockets.length > 0
-            ? reservedRockets.map((rocket) => (
-              <li key={rocket.id}>
-                <h3>{rocket.name}</h3>
-              </li>
-            ))
-            : <li>No reserved rockets</li>}
-        </ul>
+
+      <div className="table-container">
+        <h2 className="table-head">My Rockets</h2>
+        <table>
+          <tbody>
+            {' '}
+            {reservedRockets.length > 0 ? (
+              reservedRockets.map((rocket) => (
+                <tr key={rocket.id}>
+                  <td>{rocket.name}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td>No reserved rockets</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </div>
   );

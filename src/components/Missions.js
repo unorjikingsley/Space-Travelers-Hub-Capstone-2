@@ -19,7 +19,7 @@ const Missions = () => {
           <MissionItem
             key={item.id}
             index={index}
-            name={item.mission_name}
+            name={item.name}
             description={item.description}
             id={item.id}
             joined={item.joined}
