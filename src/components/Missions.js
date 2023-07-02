@@ -5,7 +5,8 @@ import MissionItem from './MissionItem';
 import '../styles/missions.css';
 
 const Missions = () => {
-  const { missionList } = useSelector((state) => state.mission);
+  // const { missionList } = useSelector((state) => state.mission);
+  const missionList = useSelector((state) => state.mission.missionList);
   return (
     <ul>
       <table>
