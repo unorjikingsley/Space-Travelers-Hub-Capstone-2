@@ -90,7 +90,7 @@ For more information on the importance of a professional README for your reposit
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://unorjikingsley.github.io/Space-Travelers-Hub-Capstone-2/)
+- [Live Demo Link](https://try-out--neon-croissant-69c240.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
