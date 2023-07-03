@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+
+.list-api {
+  display: flex;
+  gap: 25px;
+  margin: 0 60px 0 50px;
+  border-radius: 1rem;
+  padding: 1rem 0 1rem 0;
+}
+
+.img-api {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: auto;
+}
+
+.div-api {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.api-name {
+  background: rgb(38, 121, 177);
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  border-radius: 5px;
+  padding: 2px;
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+}
+
+.para-api {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.active {
+  color: rgb(38, 121, 177);
+}
+
+.unactive {
+  color: rgb(38, 121, 177);
+  text-decoration: none;
+}
+
+.reserved {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+.cancel {
+  color: rgb(38, 121, 177);
+  background-color: white;
+  border: 1px solid rgb(38, 121, 177);
+}
+
+.reserve {
+  background-color: rgb(38, 121, 177);
+  color: white;
+}
